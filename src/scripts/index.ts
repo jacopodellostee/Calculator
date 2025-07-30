@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   // Takes The Operator In Input
-  const operatorButtons = document.querySelectorAll(".operator button");
+  const operatorButtons = document.querySelectorAll(".operator");
 
   operatorButtons.forEach((opButton) => {
 

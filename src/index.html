@@ -6,31 +6,39 @@
     <meta name="author" content="Jacopo Dell'Oste">
     <title>First Calculator</title>
 </head>
-<body>
-    <div class="calculator">
+<body class="bg-gray-100 flex items-center justify-center min-h-screen">
 
-        <div class="numberContainer">
-            <button class="number" value="1">1</button>
-            <button class="number" value="2">2</button>
-            <button class="number" value="3">3</button>
-            <button class="number" value="4">4</button>
-            <button class="number" value="5">5</button>
-            <button class="number" value="6">6</button>
-            <button class="number" value="7">7</button>
-            <button class="number" value="8">8</button>
-            <button class="number" value="9">9</button>
-        </div>
-        
-        <div class="operator">
-            <button value="+">+</button>
-            <button value="-">-</button>
-            <button value="*">*</button>
-            <button value="/">/</button>
-        </div>
-
-        <button value="=" id="calculateResult">=</button>
+  <div class="bg-white p-6 rounded-xl shadow-lg w-80 space-y-4">
+    
+    <!-- Display -->
+    <div class="result bg-gray-200 text-right text-xl p-3 rounded-md min-h-[3rem]">
+      
     </div>
 
-    <div class="result"></div>
+    <!-- Number Buttons -->
+    <div class="grid grid-cols-3 gap-3">
+      <button class="number bg-blue-100 hover:bg-blue-200 rounded-md py-2 text-lg font-semibold" value="1">1</button>
+      <button class="number bg-blue-100 hover:bg-blue-200 rounded-md py-2 text-lg font-semibold" value="2">2</button>
+      <button class="number bg-blue-100 hover:bg-blue-200 rounded-md py-2 text-lg font-semibold" value="3">3</button>
+      <button class="number bg-blue-100 hover:bg-blue-200 rounded-md py-2 text-lg font-semibold" value="4">4</button>
+      <button class="number bg-blue-100 hover:bg-blue-200 rounded-md py-2 text-lg font-semibold" value="5">5</button>
+      <button class="number bg-blue-100 hover:bg-blue-200 rounded-md py-2 text-lg font-semibold" value="6">6</button>
+      <button class="number bg-blue-100 hover:bg-blue-200 rounded-md py-2 text-lg font-semibold" value="7">7</button>
+      <button class="number bg-blue-100 hover:bg-blue-200 rounded-md py-2 text-lg font-semibold" value="8">8</button>
+      <button class="number bg-blue-100 hover:bg-blue-200 rounded-md py-2 text-lg font-semibold" value="9">9</button>
+    </div>
+
+    <!-- Operator Buttons -->
+    <div class="grid grid-cols-4 gap-3">
+      <button class="operator bg-yellow-100 hover:bg-yellow-200 rounded-md py-2 text-lg font-semibold" value="+">+</button>
+      <button class="operator bg-yellow-100 hover:bg-yellow-200 rounded-md py-2 text-lg font-semibold" value="-">−</button>
+      <button class="operator bg-yellow-100 hover:bg-yellow-200 rounded-md py-2 text-lg font-semibold" value="*">×</button>
+      <button class="operator bg-yellow-100 hover:bg-yellow-200 rounded-md py-2 text-lg font-semibold" value="/">÷</button>
+    </div>
+
+    <!-- Equal Button -->
+    <button id="calculateResult" value="=" class="w-full bg-green-500 hover:bg-green-600 text-white py-2 rounded-md text-lg font-bold">=</button>
+  </div>
+
 </body>
 </html>
