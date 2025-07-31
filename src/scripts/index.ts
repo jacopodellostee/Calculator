@@ -3,6 +3,8 @@ import "../styles/style.css";
 document.addEventListener("DOMContentLoaded", () => {
 
   const display = document.querySelector(".result");
+
+  const reset = document.querySelector("#reset");
     
   let compiteNumber: string = ""; 
 
@@ -92,6 +94,18 @@ document.addEventListener("DOMContentLoaded", () => {
 
       operator = "";
 
+    });
+
+    if(!reset) return;
+
+    reset.addEventListener("click", () => {
+        firstNumber = secondNumber = NaN;
+
+        compiteNumber = "";
+
+        operator = "";
+
+        display.textContent = "";
     });
   }
 });
