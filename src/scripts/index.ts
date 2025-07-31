@@ -1,6 +1,8 @@
 import "../styles/style.css";
 
 document.addEventListener("DOMContentLoaded", () => {
+
+  const display = document.querySelector(".result");
     
   let compiteNumber: string = ""; 
 
@@ -12,6 +14,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Takes The Number In Input
   const numbers = document.querySelectorAll(".number");
+
+  if (!display) 
+    return;
   
   numbers.forEach((numberButton) => {
 
@@ -20,6 +25,8 @@ document.addEventListener("DOMContentLoaded", () => {
       let value: string = (numberButton as HTMLButtonElement).value;
 
       compiteNumber += value;
+
+      display.textContent = compiteNumber;
 
     });
 
@@ -38,6 +45,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       compiteNumber = "";
 
+      display.textContent = operator;
+
     });
 
   });
@@ -50,6 +59,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
       secondNumber = Number(compiteNumber);
 
+      display.textContent = secondNumber.toString();
+      
       let result: number;
 
       switch (operator) {
@@ -75,12 +86,7 @@ document.addEventListener("DOMContentLoaded", () => {
           break;
       }
 
-      // Calculate The Result
-      const resultDiv = document.querySelector(".result");
-
-      if (resultDiv) {
-        resultDiv.textContent = `${result}`;
-      }
+      display.textContent = `${result}`;
 
       compiteNumber = "";
 
